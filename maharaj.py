@@ -184,6 +184,7 @@ def chat():
 
     return render_template_string(HTML, chat=chat_history)
 
-# ---------------- RUN ----------------
-if __name__ == "__main__":
-    app.run(host="0.0.0.0",port=5000)
+# ---------------- RUN (RENDER READY) ----------------
+if _name_ == "_main_":
+    port = int(os.environ.get("PORT", 5000))
+    app.run(host="0.0.0.0", port=port)
